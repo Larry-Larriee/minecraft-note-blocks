@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --honolulu-blue: #38A0E5;
+}
+
+nav{
+  font-family: 'Poppins', sans-serif;
+}
+nav a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul{
+  list-style: none;
+  background-color: var(--honolulu-blue);
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1.25rem;
+}
+nav ul p{
+  font-size: 1.15rem;
+}
+
+nav ul a{
+  border: 1px solid white;
+  padding: 0.5rem;
+
+  transition: 400ms ease;
+}
+nav ul a:hover{
+  background-color: white;
+  color: var(--honolulu-blue);
+
+  transition: 400ms ease;
+}
+
+.note-block{
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3.5rem;
+  padding-top: 2.5rem;
+
+  position: relative;
+  font-size: 2rem;
+}
+.note-block-hero{
+  font-size: 2rem;
+}
+.note-block-image img{
+  max-width: 15rem;
+}
+
+.note-block-material-text{
+  position: absolute;
+  bottom: 10rem;
+  left: 10rem;
+}
+.note-block-material-arrow{
+  position: absolute;
+  bottom: -2rem;
+  left: 16.5rem;
+}
+.note-block-material-arrow img{
+  max-width: 18rem;
+}
