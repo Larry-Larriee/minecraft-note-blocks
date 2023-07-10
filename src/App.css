@@ -7,14 +7,16 @@
 
 :root{
   --honolulu-blue: #38A0E5;
+  --celadon: #BAD4AA;
+}
+
+/* Dissalow user to hover and select element (think of blue select) */
+.no-select{
+  user-select: none;
 }
 
 nav{
   font-family: 'Poppins', sans-serif;
-}
-nav a{
-  text-decoration: none;
-  color: #ffffff;
 }
 
 nav ul{
@@ -23,24 +25,34 @@ nav ul{
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 1.25rem;
+  padding: 1rem 1.5rem;
 }
 nav ul p{
   font-size: 1.15rem;
 }
 
-nav ul a{
+nav ul h3{
   border: 1px solid white;
   padding: 0.5rem;
 
   transition: 400ms ease;
+  font-size: 1rem;
+  color: white;
 }
-nav ul a:hover{
+nav ul h3:hover{
   background-color: white;
   color: var(--honolulu-blue);
 
   transition: 400ms ease;
+  cursor: pointer;
+}
+nav ul h3:active{
+  background: var(--celadon);
+  border: 1px solid var(--celadon);
+  color: white;
+  transition: none;
 }
 
 .note-block{
@@ -62,6 +74,7 @@ nav ul a:hover{
 }
 .note-block-image img{
   max-width: 15rem;
+  cursor: pointer;
 }
 
 .note-block-material-text{
@@ -76,4 +89,27 @@ nav ul a:hover{
 }
 .note-block-material-arrow img{
   max-width: 18rem;
+}
+
+.note-block-shake{
+  cursor: default !important;
+  animation: shakeAnimation 1s ease;
+}
+
+@keyframes shakeAnimation {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(-15deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(15deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
 }
