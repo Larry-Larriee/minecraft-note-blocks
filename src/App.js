@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import noteBlock from "./note-block.png";
 import arcArrow from "./Arc-Arrow.png";
 import './App.css';
-import { banjo, bass, bassDrum, bell, bit, chime, cowBell, didgeridoo, ePiano, flute, guitar, hat, ironXylophone, snare, xylophone } from "./sounds";
+import { soundNames, banjo, bass, bassDrum, bell, bit, chime, cowBell, didgeridoo, ePiano, flute, guitar, hat, ironXylophone, snare, xylophone } from "./sounds";
 
 function App() {
 
@@ -22,15 +22,13 @@ function App() {
 
     // Switch the current music block sound
     const switchSound = () => {
-      if (soundQueue === (sounds.length - 1)) alterQueue();
-      return sounds[soundQueue++];
-    }
-
-    // Helper for switchSound
-    const alterQueue = () => {
-      changeQueue((previous) => {
-        if (previous === (sounds.length - 1)) return -1;
-      })
+      if (soundQueue === (sounds.length - 1)){
+        changeQueue(0);
+        return;
+      }
+      else{
+        changeQueue((previous) => previous + 1);
+      }
     }
 
     const noteBlock = noteBlockRef.current;
