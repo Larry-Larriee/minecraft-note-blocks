@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --honolulu-blue: #38A0E5;
+  --celadon: #BAD4AA;
+}
+
+/* Dissalow user to hover and select element (think of blue select) */
+.no-select{
+  user-select: none;
+}
+.content-hidden{
+  /* visibility: hidden; */
+  display: none;
+}
+
+nav{
+  font-family: 'Poppins', sans-serif;
+}
+
+nav ul{
+  list-style: none;
+  background-color: var(--honolulu-blue);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 1.5rem;
+}
+nav ul p{
+  font-size: 1.15rem;
+}
+
+nav ul h3{
+  border: 1px solid white;
+  padding: 0.5rem;
+
+  transition: 400ms ease;
+  font-size: 1rem;
+  color: white;
+}
+nav ul h3:hover{
+  background-color: white;
+  color: var(--honolulu-blue);
+
+  transition: 400ms ease;
+  cursor: pointer;
+}
+nav ul h3:active{
+  background: var(--celadon);
+  border: 1px solid var(--celadon);
+  color: white;
+  transition: none;
+}
+
+.note-block{
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3.5rem;
+  padding-top: 2.5rem;
+
+  position: relative;
+  font-size: 2rem;
+}
+.note-block-hero{
+  font-size: 2rem;
+}
+.note-block-image img{
+  max-width: 15rem;
+  cursor: pointer;
+}
+
+.note-block-material{
+  max-width: 80rem;
+}
+.note-block-material p{
+  text-align: center;
+}
+
+.note-block-shake{
+  cursor: default !important;
+  animation: shakeAnimation 1s ease;
+}
+
+@keyframes shakeAnimation {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(-15deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(15deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.note-block-notes{
+  position: absolute;
+  top: 8rem;
+  max-width: 15rem;
+}
+.note-block-notes img{
+  min-width: 3rem;
+  max-width: 3rem;
+} 
+
+.rise-up{
+  animation: moveUp 600ms forwards;
+}
+
+@keyframes moveUp {
+  from{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(-6rem);
+    opacity: 0;
+  }
+}
