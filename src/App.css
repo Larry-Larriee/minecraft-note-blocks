@@ -14,6 +14,10 @@
 .no-select{
   user-select: none;
 }
+.content-hidden{
+  /* visibility: hidden; */
+  display: none;
+}
 
 nav{
   font-family: 'Poppins', sans-serif;
@@ -77,18 +81,11 @@ nav ul h3:active{
   cursor: pointer;
 }
 
-.note-block-material-text{
-  position: absolute;
-  bottom: 10rem;
-  left: 10rem;
+.note-block-material{
+  max-width: 80rem;
 }
-.note-block-material-arrow{
-  position: absolute;
-  bottom: -2rem;
-  left: 16.5rem;
-}
-.note-block-material-arrow img{
-  max-width: 18rem;
+.note-block-material p{
+  text-align: center;
 }
 
 .note-block-shake{
@@ -111,5 +108,30 @@ nav ul h3:active{
   }
   100%{
     transform: rotate(0deg);
+  }
+}
+
+.note-block-notes{
+  position: absolute;
+  top: 8rem;
+  max-width: 15rem;
+}
+.note-block-notes img{
+  min-width: 3rem;
+  max-width: 3rem;
+} 
+
+.rise-up{
+  animation: moveUp 600ms forwards;
+}
+
+@keyframes moveUp {
+  from{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(-6rem);
+    opacity: 0;
   }
 }

@@ -30,36 +30,38 @@ export let ironXylophone = new Audio(ironXylophoneSound);
 export let snare         = new Audio(snareSound);
 export let xylophone     = new Audio(xylophoneSound);    
 
-export const soundNames = {
-    "banjo": "Banjo",
-    "bass": "Bass (String Bass)",
-    "bassDrum": "Bass Drum (Kick)",
-    "bell": "Bells (Glockenspiel)",
-    "bit": "\"Bit\" (Square wave)",
-    "chime": "Chimes",
-    "cowBell": "Cow Bell",
-    "didgeridoo": "Didgeridoo",
-    "ePiano": "\"Pling\" (Electric piano)",
-    "flute": "Flute",
-    "guitar": "Guitar",
-    "hat": "Clicks and Sticks (Hihat)",
-    "ironXylophone": "Iron Xylophone (Vibraphone)",
-    "snare": "Snare Drum",
-    "xylophone": "Xylophone",
+export const newSoundNames = [
+    "Bass (String Bass)",
+    "Bass Drum (Kick)",
+    "Bells (Glockenspiel)",
+    "\"Bit\" (Square wave)",
+    "Chimes",
+    "Cow Bell",
+    "Didgeridoo",
+    "\"Pling\" (Electric piano)",
+    "Flute",
+    "Guitar",
+    "Clicks and Sticks (Hihat)",
+    "Iron Xylophone (Vibraphone)",
+    "Snare Drum",
+    "Xylophone",
+    "Banjo"
+];
 
-    "banjoMaterial": "Hay Bale",
-    "bassMaterial": "Wood",
-    "bassDrumMaterial": "Stone, Blackstone, Netherrack, Nylium, Obsidian, Quartz, Sandstone, Ores, Bricks, Corals, Respawn Anchor, Bedrock, Concrete, Observer",
-    "bellMaterial": "Block of Gold",
-    "bitMaterial": "Block of Emerald",
-    "chimeMaterial": "Packed Ice",
-    "cowBellMaterial": "Soul Sand",
-    "didgeridooMaterial": "Pumpkin",
-    "ePianoMaterial": "Glowstone",
-    "fluteMaterial": "Clay, Honeycomb Block, Infested Block",
-    "guitarMaterial": "Wool",
-    "hatMaterial": "Glass, Sea Lantern, Beacon",
-    "ironXylophoneMaterial": "Block of Iron",
-    "snareMaterial": "Sand, Gravel, Concrete Powder",
-    "xylophoneMaterial": "Bone Block"
-}
+export const soundMaterials = [
+    "Wood",
+    "Stone, Blackstone, Netherrack, Nylium, Obsidian, Quartz, Sandstone, Ores, Bricks, Corals, Respawn Anchor, Bedrock, Concrete, Observer",
+    "Block of Gold",
+    "Block of Emerald",
+    "Packed Ice",
+    "Soul Sand",
+    "Pumpkin",
+    "Glowstone",
+    "Clay, Honeycomb Block, Infested Block",
+    "Wool",
+    "Glass, Sea Lantern, Beacon",
+    "Block of Iron",
+    "Sand, Gravel, Concrete Powder",
+    "Bone Block",
+    "Hay Bale"
+];
