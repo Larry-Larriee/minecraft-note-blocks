@@ -6,17 +6,23 @@
 }
 
 :root{
-  --honolulu-blue: #38A0E5;
+  --honolulu-blue: #0088dc;
+  --light-honolulu-blue: #71bff0;
   --celadon: #BAD4AA;
+  --davy-grey: #5E5D5C;
+  --silver: #C2C2C1;
+  --yale-blue: #043565;
 }
 
 /* Dissalow user to hover and select element (think of blue select) */
 .no-select{
   user-select: none;
 }
-.content-hidden{
-  /* visibility: hidden; */
+.content-gone{
   display: none;
+}
+.content-hidden{
+  visibility: hidden;
 }
 
 nav{
@@ -37,6 +43,10 @@ nav ul p{
   font-size: 1.15rem;
 }
 
+nav ul section{
+  display: flex;
+  gap: 1rem;
+}
 nav ul h3{
   border: 1px solid white;
   padding: 0.5rem;
@@ -57,6 +67,34 @@ nav ul h3:active{
   border: 1px solid var(--celadon);
   color: white;
   transition: none;
+}
+
+.drop-select{
+  position: relative;
+  min-width: 10rem;
+  max-width: 10rem;
+
+}
+.drop-select-open{
+  position: absolute;
+  z-index: 1;
+  background: var(--light-honolulu-blue);
+
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.drop-select-open p{
+  cursor: pointer;
+
+  padding: 0.5rem;
+  color: white;
+}
+.drop-select-open p:hover{
+  background: var(--honolulu-blue);
+  transition: 400ms ease;
 }
 
 .note-block{
